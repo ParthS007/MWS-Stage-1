@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,9 @@
     <title>Restaurant Reviews</title>
   </head>
   <body>
+    <a href="#neighborhoods-select" class="skip-link">
+      Skip map section to filter section dropdowns
+    </a>
     <header>
       <nav>
         <h1>
@@ -20,15 +23,15 @@
     </header>
     <main id="maincontent">
       <section id="map-container">
-        <div id="map"></div>
+        <div id="map" aria-label="Map for showing Available Restaurants, Use Arrow keys to move the map"></div>
       </section>
       <section>
         <div class="filter-options">
           <h2>Filter Results</h2>
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <select id="neighborhoods-select" name="neighborhoods" aria-label="filter neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
           </select>
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <select id="cuisines-select" name="cuisines" aria-label="filter cuisines" onchange="updateRestaurants()">
             <option value="all">All Cuisines</option>
           </select>
         </div>
@@ -45,5 +48,8 @@
       </a>
       All Rights Reserved.
     </footer>
+    <noscript>
+      JavaScript is required to be enabled to run this application.
+    </noscript>
   </body>
 </html>
