@@ -13,6 +13,19 @@ const jsFiles = [
   'js/restaurant_info.js'
 ];
 
+const imgFiles = [
+  './img/1.jpg',
+  './img/2.jpg',
+  './img/3.jpg',
+  './img/4.jpg',
+  './img/5.jpg',
+  './img/6.jpg',
+  './img/7.jpg',
+  './img/8.jpg',
+  './img/9.jpg',
+  './img/10.jpg'
+];
+
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
@@ -20,8 +33,9 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         cache.addAll([
           '/',
-          ...cssFiles,
-          ...jsFiles
+          cssFiles,
+          jsFiles,
+          imgFiles
         ]);
       }).catch(() => {
         console.log('Error caching static assets!');

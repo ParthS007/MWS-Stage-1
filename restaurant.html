@@ -11,21 +11,23 @@
     <a href="#footer" class="skip-link">Skip map section to footer</a>
     <header>
       <!-- Beginning nav -->
-      <nav aria-label="Breadcrumb">
+      <nav role="Navigation" >
         <h1><a href="/">Restaurant Reviews</a></h1>
       </nav>
-      <!-- Beginning breadcrumb -->
-      <ul id="breadcrumb" >
-        <li><a href="/" aria-label="Link Home">Home</a></li>
-      </ul>
-      <!-- End breadcrumb -->
+        <!-- Beginning breadcrumb -->
+      <nav id="Breadcrumb" aria-label="Breadcrumb" role="Navigation">
+        <ul>
+          <li><a href="/" aria-label="Link Home">Home</a></li>
+        </ul>
+        <!-- End breadcrumb -->
+      </nav>
       <!-- End nav -->
     </header>
     <!-- End header -->
     <!-- Beginning main -->
     <main id="maincontent">
       <!-- Beginning map -->
-      <section id="map-container">
+      <section id="map-container" role="application">
           <div id="map" aria-label="Map for showing Available Restaurants, Use Arrow keys to move the map"></div>
       </section>
       <!-- End map -->
